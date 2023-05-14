@@ -1,0 +1,211 @@
+@import url("https://fonts.cdnfonts.com/css/sharp-sans");
+* {
+  box-sizing: border-box;
+  font-family: "Sharp Sans", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.intro {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #55a630;
+  transition: 1s;
+}
+
+.logo-header {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 5vw;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+
+.logo.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+
+.topnav {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  overflow: hidden;
+  background-color: #55a630ce;
+}
+
+.topnav a {
+  margin-left: 10px;
+  font-family: "Sharp Sans", sans-serif;
+  font-weight: bold;
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.4s;
+}
+
+.topnav a:hover {
+  background-color: #ffffff;
+  color: black;
+  border-radius: 40px;
+  transition: 0.4s;
+}
+
+.topnav a.active {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 40px;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #55a630;
+}
+
+.wavyTitle {
+  transform: translateY(-10px);
+  font-size: 100px;
+  font-family: "Sharp Sans", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 0;
+}
+.wave div:nth-child(n) {
+  animation: flow 30s linear infinite;
+  background: url(wave.png);
+  background-size: 1000px 100px;
+  position: inherit;
+  width: 100%;
+  height: 100px;
+}
+
+.wave div:nth-child(1) {
+  opacity: 1;
+  bottom: 0;
+  animation-delay: 0s;
+}
+.wave div:nth-child(2) {
+  animation-direction: reverse;
+  opacity: 0.5;
+  bottom: 10px;
+  animation-delay: 0s;
+}
+.wave div:nth-child(3) {
+  opacity: 0.7;
+  bottom: 15px;
+  animation-delay: -2s;
+}
+.wave div:nth-child(4) {
+  animation-direction: reverse;
+  opacity: 0.7;
+  bottom: 5px;
+  animation-delay: -5s;
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0px;
+  }
+
+  100% {
+    background-position: 1000px;
+  }
+}
+
+#cards {
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 1200px;
+  width: calc(100% - 20px);
+  margin: auto;
+  justify-content: center;
+}
+
+.card {
+  transition: 0.4s;
+  background-color: #55a63080;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+}
+
+.card:hover {
+  background-color: #55a630;
+  transition: 0.4s;
+  cursor: pointer;
+  width: 400px;
+}
+
+p {
+  font-weight: bold;
+  font-family: "Sharp Sans", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  align-items: center;
+  position: relative;
+  top: 0%;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.trans {
+  z-index: -1;
+  position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  background-color: white;
+  transition: opacity 1s;
+
+}

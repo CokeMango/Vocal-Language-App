@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--Background -->
+<html lang="en" id="htmlid">
+<head>
+    <link rel="stylesheet" href="game_End.css">
+    <link rel="" href="">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EndSpanish</title>
+</head>
+<body>
+    <!--Page Header-->
+<div class="headerDiv"> <h1 class="header"> Vocal</h1> </div>       
+     <!--Card 1-->
+<div class="card1">
+
+    <form class="form" style="padding-top: 150px;">
+        <h1 class="scoreheader">Score</h1>
+        <p id="scoreID"></p>
+        <a class="return" href="main.html"><img src="arrow.png" alt=""></a>
+    </form>
+  
+</div>
+</body>
+</html>
+
+
+
+<script>
+
+var score = sessionStorage.getItem("score");
+document.getElementById("scoreID").innerText = score;
+console.log("The score is: " + score);
+
+</script>
